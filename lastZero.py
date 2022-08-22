@@ -1,8 +1,13 @@
-a = [1,2,3,0,4,0,5,6,0]
-#a.sort()
-print(a)
-for i in a:
-    if(i == 0):
-        a.append(0)
-        a.remove(i)
-print(a)
+n = int(input())
+l = list(map(int,input().split()))[:n]
+x = []
+count = 0
+for i in range(n):
+    if(l[i]!=0):
+        temp = l[i]
+        x.append(temp)
+    else:
+        count=count+1
+for j in range(count):
+    x.append(0)
+print(" ".join(map(str,x)))
